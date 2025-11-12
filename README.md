@@ -83,7 +83,8 @@ This confirmed that word-level features contribute unique information about text
 
 ## 🧰 Project Structure
 
-```markdown
+
+
 ```
 
 midterm_project/
@@ -116,7 +117,7 @@ midterm_project/
 └── README.md
 
 ```
-```
+
 
 
 ## 🐳 Docker Usage
