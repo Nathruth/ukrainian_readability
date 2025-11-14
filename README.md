@@ -21,7 +21,7 @@ This model can later be used to estimate the difficulty of Ukrainian texts for l
 ## 📚 Data Source
 
 The dataset used in this project is based on the Ukrainian Textbook Readability Dataset by
-[Sergii Prykhodchenko](https://github.com/prykhodchenkosd/ukrtb).  
+[Serge Prykhodchenko](https://github.com/prykhodchenkosd/ukrtb).  
 The original dataset includes linguistic statistics extracted from Ukrainian school textbooks
 (Grades 1–9). It was used here under an open-source academic license for educational purposes.
 
@@ -39,6 +39,24 @@ Briefly:
 
 
 ## 📈 Exploratory Data Analysis (EDA)
+
+
+#Feature Distribution Overview
+
+To explore the general structure of the dataset, I visualized the distribution of each numeric feature across five difficulty levels.
+Most variables showed clear progressive patterns from Beginner to Academic, confirming that the dataset captures linguistic development across grades.
+
+In particular:
+
+* Average word length and average sentence length steadily increased with level.
+* Total words and letters varied mainly with text length, not difficulty.
+* Average syllables per word again showed the clearest separation between levels, foreshadowing its importance in the final model.
+
+These visualizations supported the hypothesis that structural linguistic features alone can reliably distinguish text complexity.
+
+![Feature Distributions](images/feature_distributions.png)
+
+*(Full EDA, including all 7 distribution plots, is available in the Jupyter notebook.)*
 
 
 Include combined image:
