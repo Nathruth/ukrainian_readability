@@ -5,7 +5,7 @@
 Although readability formulas such as *Flesch Reading Ease* and *Flesch-Kincaid Grade Level* exist for English and some other languages, Ukrainian currently lacks any established computational model to automatically assess text difficulty.
 This creates challenges for Ukrainian language learners, teachers, and educational material developers, who have no objective way to evaluate whether a text is appropriate for a given proficiency level.
 
-To address this gap, I used the Ukrainian Textbook Readability Dataset created by Sergii Prykhodchenko et al., which contains linguistic statistics extracted from Ukrainian school textbooks (Grades 1–9).
+To address this gap, I used the Ukrainian Textbook Readability Dataset created by Serge Prykhodchenko et al., which contains linguistic statistics extracted from Ukrainian school textbooks (Grades 1–9).
 The original researchers focused on comparing various readability formulas, but their raw dataset also provides detailed structural features (word counts, sentence lengths, syllable counts, etc.).
 
 In this project, I:
@@ -88,11 +88,25 @@ This confirmed that word-level features contribute unique information about text
 After data cleaning, feature selection, and hyperparameter tuning, two models were trained and compared — Random Forest and XGBoost.
 Both achieved strong and consistent performance, with Random Forest slightly outperforming XGBoost on the validation set.
 
-Final Model (Random Forest Classifier)
+Model Results
 
-* Accuracy: 95%
-* Macro F1-score: 0.94
-* Test size: 20% (stratified split)
+* Accuracy: 0.947
+* Macro F1-score: 0.95
+* Per-class F1-scores:
+
+  * Beginner: 0.93
+  * Academic: 0.93
+  * Advanced: 0.92
+  * Intermediate: 0.98
+  * Upper Intermediate: 0.97
+
+Best hyperparameters:
+
+```
+  {'max_depth': 10, 'min_samples_split': 2, 'n_estimators': 200}
+```
+
+The model achieves high performance across all proficiency levels, with the macro F1-score showing balanced accuracy between classes.
 
 These results indicate that the model successfully distinguishes between different difficulty levels based on a small set of structural linguistic features.
 Given that the dataset represents real Ukrainian school materials (Grades 1–9), this level of accuracy demonstrates that the features capture genuine linguistic progression between beginner and advanced levels.
@@ -166,10 +180,10 @@ midterm_project/
 │
 ├── images/
 │   ├── feature_distributions.png
-│   ├── pairplot.png
-│   ├── correlation_heatmap.png
-│   ├── feature_importance.png
-│   ├── confusion_matrix.png
+│   ├── pairs4.png
+│   ├── correlationheatmap.png
+│   ├── featureimportance.png
+│   ├── confusion.png
 |   .......
 │──Dockerfile
 │── requirements.txt
@@ -181,18 +195,41 @@ midterm_project/
 
 ## 🐳 Docker Usage
 
+## Docker Usage
+
+Pull the image from Docker Hub:
+```
+docker pull nathaira/ukrainian-readability
+```
+
+Run the container interactively:
+```
+docker run -it nathaira/ukrainian-readability
+```
+
+Optional: run the training script inside the container:
+```
+docker run -it nathaira/ukrainian-readability python app/train.py
+```
+
 
 
 ## 🚀 Deployment
 
 * Optional: URL or note that the service runs locally via Docker (127.0.0.1:8000)
-* Add short explanation how to run it with docker run or uvicorn.
+* The project is also deployed on Render:
+
+[Ukrainian Readability](https://ukrainian-readability.onrender.com)
+
+You can send requests to the API or view results directly in the browser.
 
 
 ## 🙏 Acknowledgments
 
-Dataset by [Sergii Prykhodchenko](https://github.com/prykhodchenkosd/ukrtb)
+Dataset by [Serge Prykhodchenko](https://github.com/prykhodchenkosd/ukrtb)
+
 ML Zoomcamp by Alexey Grigorev
+
 Special thanks for open educational resources and Ukrainian NLP community inspiration.
 
 
