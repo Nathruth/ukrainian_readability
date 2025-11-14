@@ -1,0 +1,18 @@
+# Ukrainian Textbook Readability Dataset
+
+Source: [https://github.com/prykhodchenkosd/ukrtb](https://github.com/prykhodchenkosd/ukrtb)
+
+Author: Serge Prykhodchenko
+License: Open academic use (see original repository for details)
+
+Used files:
+- res2_1-5.xlsx
+
+Notes:
+- Levels were reassigned as follows:
+  - 1st sheet → Beginner
+  - 2nd sheet → Intermediate
+  - 3d sheet → Upper_Intermediate
+  - 4th sheet → Advanced
+  - 5th sheet → Academic
+- Added additional feature engineering and cleaning steps.
