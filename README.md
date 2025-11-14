@@ -198,8 +198,6 @@ midterm_project/
 
 ## 🐳 Docker Usage
 
-## Docker Usage
-
 Pull the image from Docker Hub:
 ```
 docker pull nathaira/ukrainian-readability
