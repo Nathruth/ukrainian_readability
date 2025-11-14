@@ -170,7 +170,7 @@ midterm_project/
 │   └── data_source.txt
 │
 ├── EDA/
-│   └── readability_EDA.ipynb
+│   └── dataprep.ipynb
 │
 ├── model/
 │   └── ukrainian_readability_model.pkl
@@ -178,6 +178,7 @@ midterm_project/
 ├── app/
 │   ├── train.py
 │   ├── predict.py
+|   ├── app.py
 │
 ├── images/
 │   ├── feature_distributions.png
@@ -185,7 +186,8 @@ midterm_project/
 │   ├── correlationheatmap.png
 │   ├── featureimportance.png
 │   ├── confusion.png
-|   .......
+|   | .......
+|
 │──Dockerfile
 │── requirements.txt
 └── README.md
