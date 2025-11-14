@@ -134,8 +134,8 @@ This result aligns closely with established readability theory.
 In many languages—including Ukrainian—words with more syllables tend to be morphologically complex and less frequent in everyday language.
 Texts containing a higher proportion of such multisyllabic words are therefore typically more challenging for learners to process.
 
-Interestingly, the total counts of words or letters wnotot** strong indicators of difficulty.
-This suggests that text *length* alone is not what drives complexity; instelexical and morphological richnessss** (captured by syllable structure) plays the central role.
+Interestingly, the total counts of words or letters weren't strong indicators of difficulty.
+This suggests that text *length* alone is not what drives complexity; instelexical and morphological richnessss (captured by syllable structure) plays the central role.
 
 ### Visual Summary
 
