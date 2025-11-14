@@ -33,7 +33,8 @@ All preprocessing, labeling, and level assignments (elementary → academic) wer
 
 * Combined and cleaned datasets from Grades 1–9
 * Added difficulty level labels: Beginner → Academic
-* Handled missing values in AvgWord in Syl using mean imputation
+* Handled missing values using mean imputation
+* Reduced duplicates appeared due to excel file
 * Saved cleaned dataset as combined_clean.csv
 
 
@@ -77,7 +78,7 @@ While the pairplot contained many combinations, it provided a global overview of
 
 To identify relationships between features, I plotted a correlation heatmap of all numeric variables.
 The analysis revealed strong positive correlations between features such as Words, Letters, and Sentences, which all reflect text length.
-At the same time, AvgWord in Syl and AvgWord in Letters showed weaker correlations with other variables, indicating they capture distinct linguistic properties.
+At the same time, avg_word_syl and avg_word in Letters showed weaker correlations with other variables, indicating they capture distinct linguistic properties.
 
 This confirmed that word-level features contribute unique information about text complexity, justifying their inclusion in the final model.
 
