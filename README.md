@@ -1,4 +1,4 @@
-### ukrainian_readability project
+# ukrainian_readability project
 
 ## 💡 Description of the Problem
 
@@ -40,7 +40,7 @@ All preprocessing, labeling, and level assignments (elementary → academic) wer
 ## 📈 Exploratory Data Analysis (EDA)
 
 
-#Feature Distribution Overview
+### Feature Distribution Overview
 
 To explore the general structure of the dataset, I visualized the distribution of each numeric feature across five difficulty levels.
 Most variables showed clear progressive patterns from Beginner to Academic, confirming that the dataset captures linguistic development across grades.
